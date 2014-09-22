@@ -1,3 +1,22 @@
+# Ignore all dotfiles...
+.*
+# except for .gitignore
+!.gitignore
+
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# binary files
+target/*
+java-android/target/*
+
+# custom local file
+tempfile.java
+
 # Ignore Play! working directory #
 bin/
 /db
