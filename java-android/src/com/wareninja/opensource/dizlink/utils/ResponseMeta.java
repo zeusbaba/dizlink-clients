@@ -10,6 +10,9 @@ package com.wareninja.opensource.dizlink.utils;
 
 import java.io.Serializable;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
 /*
  * meta part of json response
  */
@@ -44,6 +47,15 @@ public class ResponseMeta implements Serializable {
 		return TAG+" [code=" + code + ", errorType=" + errorType
 				+ ", errorDetail=" + errorDetail
 				+ "]";
+	}
+	public JsonObject toJsonObject() {
+		return (new JsonParser()).parse( toJsonString() ).getAsJsonObject();
+	}
+    public String toJsonString() {
+		return "" + MyUtils.getGson().toJson(this);
+	}
+	public String toJsonStringPrinting() {
+		return "" + MyUtils.getGsonWithPrettyPrinting().toJson(this);
 	}
 }
 

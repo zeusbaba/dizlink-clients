@@ -47,9 +47,9 @@ public final class MyUtils {
 	public static Gson getGsonWithPrettyPrinting() {
 		return new GsonBuilder()
 		    .excludeFieldsWithModifiers( new int[] { 
-		    		Modifier.STATIC, Modifier.TRANSIENT//, Modifier.FINAL 
+		    		Modifier.STATIC, Modifier.TRANSIENT, Modifier.FINAL 
 		    		} )
-		    .excludeFieldsWithoutExposeAnnotation()
+		    //.excludeFieldsWithoutExposeAnnotation()
 		    .setPrettyPrinting()
 		    .create();
 	}

@@ -25,7 +25,6 @@
 package com.wareninja.opensource.dizlink.utils;
 
 import java.io.IOException;
-import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -147,7 +146,7 @@ public class MyWebClient {
 			i++;
 		}
 		
-		System.out.println("GET requestUrl : " + requestUrl);
+		if (DEBUG) System.out.println("GET requestUrl : " + requestUrl);
 		
 		/*
 		URI uri = new URIBuilder()
@@ -195,7 +194,7 @@ public class MyWebClient {
 	public String post(String methodName, Map<String, String> parameters){//, String contentType) {
 		List<RequestParameter> requestParams = new LinkedList<RequestParameter>();
 		for (String key : parameters.keySet()) {
-			if ( !key.equalsIgnoreCase("api_key") && !key.equalsIgnoreCase("api_username")) {
+			if ( !key.equalsIgnoreCase("apptoken") && !key.equalsIgnoreCase("api_username")) {
 				requestParams.add( new StringRequestParameter(key, parameters.get(key)) );
 			}
 		}
@@ -213,7 +212,7 @@ public class MyWebClient {
 			requestUrl = webServiceUrl + methodName;
 		}
 		
-		System.out.println("POST requestUrl : " + requestUrl);
+		if (DEBUG) System.out.println("POST requestUrl : " + requestUrl);
 		
 		httpPost = new HttpPost(requestUrl);
 		httpPost.setConfig(httpRequestConfig);
@@ -272,7 +271,7 @@ public class MyWebClient {
 			requestUrl = webServiceUrl + methodName;
 		}
 		
-		System.out.println("PUT requestUrl : " + requestUrl);
+		if (DEBUG) System.out.println("PUT requestUrl : " + requestUrl);
 		
 		httpPut = new HttpPut(requestUrl);
 		httpPut.setConfig(httpRequestConfig);
@@ -399,7 +398,7 @@ public class MyWebClient {
 
 		for (RequestParameter requestParam: requestParams) {
 			try {
-				if ( !requestParam.getKey().equalsIgnoreCase("api_key") && !requestParam.getKey().equalsIgnoreCase("api_username")) {
+				if ( !requestParam.getKey().equalsIgnoreCase("apptoken") && !requestParam.getKey().equalsIgnoreCase("api_username")) {
 					jsonObject.addProperty(
 							requestParam.getKey()
 							, ""+requestParam.getValue()//, requestParam.getValueStr()
@@ -412,10 +411,10 @@ public class MyWebClient {
 		return jsonObject.toString();
 	}
 	
-	public String enrichMethodName(String methodName, String api_key, String api_username) {
+	public String enrichMethodName(String methodName, String apptoken, String api_username) {
 		
 		Map<String, String> parameters = new HashMap<String, String>();
-		if (!TextUtils.isEmpty(api_key)) parameters.put("api_key", api_key);
+		if (!TextUtils.isEmpty(apptoken)) parameters.put("apptoken", apptoken);
 		if (!TextUtils.isEmpty(api_username)) parameters.put("api_username", api_username);
 		
 		return enrichMethodName(methodName, parameters);
@@ -433,7 +432,7 @@ public class MyWebClient {
 		for (String key : parameters.keySet()) {
 			
 			methodName += key+"="+parameters.get(key) + "&";
-			/*if ( key.equalsIgnoreCase("api_key") || key.equalsIgnoreCase("api_username")) {
+			/*if ( key.equalsIgnoreCase("apptoken") || key.equalsIgnoreCase("api_username")) {
 				methodName += key+"="+parameters.get(key) + "&";
 			}*/
 		}

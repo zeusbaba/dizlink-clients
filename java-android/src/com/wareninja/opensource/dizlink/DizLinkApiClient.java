@@ -44,7 +44,7 @@ public class DizLinkApiClient {
 	 * 
 	 * parameters MUST already contain
 	 * 	'long_link': long-URL-to-shorten,  (mandatory)
-	 * 	'simple_links': comma-separated-simple_links (optional)
+	 * 	'simple_links': comma-separated-simple_links (optional: upto 5 items)
 	 * 
 	 * example;
 	 * 	parameters.put("long_link", "http://maps.google.com"); // mandatory
@@ -64,7 +64,7 @@ public class DizLinkApiClient {
 	}
 	public ResponseModel makeLink(Map<String, String> parameters) {
 		// SYNCHRONOUS function
-		final String TAG = "shortenUrl";
+		final String TAG = "makeLink";
 		
 		ResponseModel responseModel = new ResponseModel();
 		
