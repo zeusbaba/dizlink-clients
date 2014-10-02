@@ -1,0 +1,86 @@
+{
+	"extension_name": {
+		"message": "DIZ.LINK :: Forkorte & Forenkle webadresser!",
+		"description": "The name of the extension"
+	},
+	"extension_short_name": {
+		"message": "DIZ.LINK",
+		"description": "The short_name of the extension"
+	},
+	"extension_description": {
+		"message": "En enkel å bruke utvidelse som lar deg å forkorte URL nettsiden av din nåværende faner.",
+		"description": "The description of the extension"
+	},
+	"extension_default_title": {
+		"message": "DIZ.LINK :: Forkorte & Forenkle webadresser!",
+		"description": "The default title of the extension"
+	},
+	"headline": {
+		"message": "DIZ.LINK :: Forkorte & Forenkle webadresser!",
+		"description": "The first headline of the extension"
+	},
+	"tabs": {
+		"message": "Tabs",
+		"description": ""
+	},
+	"url": {
+		"message": "URL",
+		"description": ""
+	},
+	"url_example": {
+		"message": "Forkorte diz link!",
+		"description": ""
+	},
+	"shorten": {
+		"message": "Forkorte",
+		"description": ""
+	},
+	"short_url": {
+		"message": "Short URL",
+		"description": ""
+	},
+	"short_url_width": {
+		"message": "327",
+		"description": ""
+	},
+	"options": {
+		"message": "Options",
+		"description": "Headline 2 of the options page"
+	},
+	"open_links_in": {
+		"message": "Open links in",
+		"description": "new window"
+	},
+	"new_tab": {
+		"message": "new tab",
+		"description": "new tab"
+	},
+	"active_tab": {
+		"message": "active tab",
+		"description": "active tab"
+	},
+	"new_window": {
+		"message": "new window",
+		"description": "new window"
+	},
+	"general_error": {
+		"message": "An error occurred.",
+		"description": ""
+	},
+	"url_not_valid": {
+		"message": "The entered URL is not valid.",
+		"description": ""
+	},
+	"network_error": {
+		"message": "It's not possible to get the requested data because of a network error.",
+		"description": ""
+	},
+	"copy": {
+		"message": "Kopier",
+		"description": ""
+	},
+	"test": {
+		"message": "Test",
+		"description": ""
+	}
+}

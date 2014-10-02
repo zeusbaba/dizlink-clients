@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta http-equiv="cache-control" content="no-cache">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"/>
+		
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/font-awesome.min.css"/>
+		
+		<link rel="stylesheet" href="css/main.css"/>
+		
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/toastr.min.js"></script>
+		<link rel="stylesheet" href="css/toastr.min.css"/>
+	    
+		<script type="text/javascript" src="js/popup.js"></script>
+		<script type="text/javascript" src="js/ga_tracker.js"></script>
+	</head>
+	<body>
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 ">
+					<p align="center">
+					<!-- <a href="http://diz.link" target="_blank">  -->
+						<img id="img-mainlogo" class="img-responsive img-rounded" src="images/mainlogo_dizlink.png" alt="DIZ.LINK">
+					<!-- </a>  -->
+					</p>
+				</div>
+				
+				<div id="div_makeDizLink" class="col-lg-12 bs-callout bs-callout-danger" align="center">
+					<!-- DIZ.LINK main form -->
+					<form id="form_makeDizLink" class="form-horizontal" role="form">
+						
+						<!-- (must) input LONG url -->
+						<!-- <div class="form-group form-group-lg has-success has-feedback"> -->
+						<div class="form-group">
+							<!-- 
+						    <div class="input-group input-group-lg">
+						    	 <a href="#" data-toggle="tooltip" data-placement="bottom" title="Enter the LONG url to shorten & simplify!"> 
+							  <input type="url" id="param_long_link" class="form-control" placeholder="Shorten diz link! (paste long link here)"  readonly>
+							  	 </a> 
+							</div>
+							-->
+							<div class="col-sm-offset-4 col-sm-8">
+							<h4 class="text-center fa-border bs-callout-reverse-warning" id="param_long_link" 
+	                        	data-toggle="tooltip" data-placement="bottom" title="shorten diz link!"
+	                        	>
+	                        </h4>
+	                        </div>
+						</div>
+						
+						<div class="form-group col-sm-offset-8 col-sm-4">
+							<!-- <label for="select-domain" class="col-sm-4 control-label">Domain</label> -->
+							<div class="col-sm-4">
+								<select class="form-control" id="select-domain" name="selectedDomain">
+								  <option>diz.link</option>
+								  <option>lfc.link</option>
+								</select>
+							</div>
+						</div>
+							
+					      <!-- submission -->
+						  <div class="form-group">
+						    <div class="col-sm-12"> <!-- col-sm-offset-2  -->
+						      	<!-- <button type="submit" class="btn btn-primary btn-lg">Shorten!</button> -->
+						      	<button type="submit" id="make-link" class="btn btn-danger" 
+									data-toggle="tooltip" data-placement="bottom" title="shorten diz link!"
+									>
+									<i class="fa fa-compress fa-lg fa-fw"></i> Shorten
+								</button>
+						    </div>
+						  </div>
+						  
+					</form>
+				</div>
+				
+				<div id="result_makeDizLink" class="col-lg-12 bs-callout-reverse bs-callout-reverse-warning" align="center">
+					
+					
+					<form id="resultForm_makeDizLink" class="form-horizontal">
+					
+						<div class="form-group form-group-lg has-success has-feedback">
+							
+							<h3 class="text-center fa-border" id="short_link" 
+	                        	data-toggle="tooltip" data-placement="bottom" title="diz link!"
+	                        	>
+	                        </h3>
+	                        
+						</div>
+						
+						  <div class="form-group">
+						    <div class="col-sm-12">
+
+						      	<button type="submit" id="copy-short-link" class="btn btn-info" 
+									data-toggle="tooltip" data-placement="bottom" title="copy diz link to clipboard!"
+									>
+									<i class="fa fa-clipboard fa-lg fa-fw"></i> Copy
+								</button>
+								
+								<a id="test-short-link" class="btn btn-info"
+									href="#" target="_blank"
+									data-toggle="tooltip" data-placement="bottom" title="test diz link!"
+									>
+									<span class="fa fa-external-link fa-lg fa-fw"></span> Test
+								</a>
+								 
+								 <!-- 
+								<button id="share-short-link" class="btn btn-info" 
+									data-toggle="tooltip" data-placement="bottom" title="share diz link!"
+									>
+									<i class="fa fa-share-alt fa-inverse fa-lg fa-fw"></i> Share
+								</button>
+								-->
+						    </div>
+							
+						  </div>	    
+					</form>
+					
+					<!-- 
+					<div id="resultForm_makeDizLink" class="form-horizontal">
+					
+						<div class="form-group form-group-lg has-success has-feedback">
+							
+							<h3 class="text-center fa-border" id="short_link" 
+	                        	data-toggle="tooltip" data-placement="bottom" title="diz link!"
+	                        	>
+	                        </h3>
+	                        
+						</div>
+						
+						  <div class="form-group">
+						    <div class="col-sm-12">
+
+						      	<button type="submit" id="copy-short-link" class="btn btn-info"
+									data-toggle="tooltip" data-placement="bottom" title="copy diz link to clipboard!"
+									>
+									<i class="fa fa-clipboard fa-lg fa-fw"></i> Copy
+								</button>
+								
+								<a id="test-short-link" class="btn btn-info"
+									href="#" target="_blank"
+									data-toggle="tooltip" data-placement="bottom" title="test diz link!"
+									>
+									<span class="fa fa-external-link fa-lg fa-fw"></span> Test
+								</a>
+								
+								<button id="share-short-link" class="btn btn-info" 
+									data-toggle="tooltip" data-placement="bottom" title="share diz link!"
+									>
+									<i class="fa fa-share-alt fa-inverse fa-lg fa-fw"></i> Share
+								</button>
+						    </div>
+							
+						  </div>	    
+					</div>
+					-->
+					
+				</div>
+				
+				<!-- 
+				<div class="col-sm-12" align="center">
+					  <div id="error_alert" class="alert alert-danger fade in" role="alert">
+					      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					      <strong>Error!</strong> tbd:error_detail
+					  </div>
+				</div>
+				-->  
+			</div><!-- form/result -->
+			
+			<br>
+			<div class="row footer">
+           
+           		<div class="col-lg-4">
+                </div>    
+           		<div class="col-lg-8 pull-right">
+                    <p class="copyright">
+                        <!-- &copy; 2014 <a href="http://diz.link" target="_blank">DIZ.LINK</a>  --> 
+                    </p>
+                    <p class="social_bookmarks">
+                    
+                        <a id="link_dizlink-home" href="http://diz.link" target="_blank"
+                        	data-toggle="tooltip" data-placement="bottom" title="main page"
+                        	>
+                        	<i class="fa fa-compress fa-2x fa-fw"></i>
+                        </a>
+						<a id="link_dizlink-mylinks" href="http://diz.link/mylinks" target="_blank"
+							data-toggle="tooltip" data-placement="bottom" title="my links"
+							>
+							<i class="fa fa-link fa-2x fa-fw fa-rotate-90"></i>
+						</a>
+						<a id="link_dizlink-about" href="http://diz.link/about" target="_blank"
+							data-toggle="tooltip" data-placement="bottom" title="about"
+							>
+							<i class="fa fa-question fa-2x fa-fw"></i>
+						</a>
+						<a id="link_dizlink-terms" href="http://diz.link/terms" target="_blank"
+							data-toggle="tooltip" data-placement="bottom" title="terms"
+							><i class="fa fa-lock fa-2x fa-fw"></i>
+						</a>
+						<a id="link_dizlink-developers" href="http://diz.link/developers" target="_blank"
+							data-toggle="tooltip" data-placement="bottom" title="developer API"
+							><i class="fa fa-code fa-2x fa-fw"></i>
+						</a>
+                    </p>
+                </div>
+	        </div> <!-- footer -->
+		</div>
+	
+		<progress id="loading" value="0" max="4"></progress>
+		<div id="error"></div>
+		
+	</body>
+</html>

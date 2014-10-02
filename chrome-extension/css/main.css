@@ -1,0 +1,259 @@
+
+
+body {
+	min-width: 400px;
+	overflow: hidden;
+	font-size: 12px;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #000000;
+	margin: 0;
+	padding: 0 10px 10px 10px;
+}
+
+h1 {
+	font-size: 16px;
+	border-bottom: 1px solid #000000;
+	color: #000000;
+	padding-bottom: 5px;
+	text-shadow: 1px 1px 1px #CCCCCC;
+}
+
+label {
+	float: left;
+	width: 80px;
+	padding-top: 4px;
+}
+
+form p {
+	margin-bottom: 0;
+}
+
+input[type=text] {
+	width: 424px;
+}
+
+select {
+	width: 430px;
+}
+
+#loading {
+	display: none;
+	margin-top: 10px;
+	width: 100%;
+}
+
+#form_makeDizLink {
+	display: block;
+	margin-top: 10px;
+}
+#result_makeDizLink {
+	display: none;
+	margin-top: 10px;
+}
+
+#error {
+	display: none;
+	margin-top: 10px;
+	padding: 10px 10px 10px 30px;
+	border: 1px solid #E7E7E7;
+	background-repeat: no-repeat;
+	background-position: 5px 6px;
+}
+
+
+/** callout from bootstrap-docs  */
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+.bs-callout h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+.bs-callout code {
+    border-radius: 3px;
+}
+.bs-callout+.bs-callout {
+    margin-top: -5px;
+}
+.bs-callout-default {
+    border-left-color: #777;
+}
+.bs-callout-default h4 {
+    color: #777;
+}
+.bs-callout-primary {
+    border-left-color: #428bca;
+}
+.bs-callout-primary h4 {
+    color: #428bca;
+}
+.bs-callout-success {
+    border-left-color: #5cb85c;
+}
+.bs-callout-success h4 {
+    color: #5cb85c;
+}
+.bs-callout-danger {
+    border-left-color: #d9534f;
+}
+.bs-callout-danger h4 {
+    color: #d9534f;
+}
+.bs-callout-warning {
+    border-left-color: #f0ad4e;
+}
+.bs-callout-warning h4 {
+    color: #f0ad4e;
+}
+.bs-callout-info {
+    border-left-color: #5bc0de;
+}
+.bs-callout-info h4 {
+    color: #5bc0de;
+}
+/* extended by YG:  added -reverse */
+.bs-callout-reverse {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-right-width: 5px;
+    border-radius: 3px;
+}
+.bs-callout-reverse-default {
+    border-right-color: #777;
+}
+.bs-callout-reverse-primary {
+    border-right-color: #428bca;
+}
+.bs-callout-reverse-success {
+    border-right-color: #5cb85c;
+}
+.bs-callout-reverse-danger { 
+    border-right-color: #d9534f;
+}
+.bs-callout-reverse-warning {
+    border-right-color: #f0ad4e;
+}
+.bs-callout-reverse-info {
+    border-right-color: #5bc0de;
+}
+
+
+/** http://bootsnipp.com/snippets/featured/timeline-single-column */
+.message-item {
+margin-bottom: 25px;
+margin-left: 40px;
+position: relative;
+}
+.message-item .message-inner {
+background: #fff;
+border: 1px solid #ddd;
+border-radius: 3px;
+padding: 10px;
+position: relative;
+}
+.message-item .message-inner:before {
+border-right: 10px solid #ddd;
+border-style: solid;
+border-width: 10px;
+color: rgba(0,0,0,0);
+content: "";
+display: block;
+height: 0;
+position: absolute;
+left: -20px;
+top: 6px;
+width: 0;
+}
+.message-item .message-inner:after {
+border-right: 10px solid #fff;
+border-style: solid;
+border-width: 10px;
+color: rgba(0,0,0,0);
+content: "";
+display: block;
+height: 0;
+position: absolute;
+left: -18px;
+top: 6px;
+width: 0;
+}
+.message-item:before {
+background: #fff;
+border-radius: 2px;
+bottom: -30px;
+box-shadow: 0 0 3px rgba(0,0,0,0.2);
+content: "";
+height: 100%;
+left: -30px;
+position: absolute;
+width: 3px;
+}
+.message-item:after {
+background: #fff;
+border: 2px solid #ccc;
+border-radius: 50%;
+box-shadow: 0 0 5px rgba(0,0,0,0.1);
+content: "";
+height: 15px;
+left: -36px;
+position: absolute;
+top: 10px;
+width: 15px;
+}
+.clearfix:before, .clearfix:after {
+content: " ";
+display: table;
+}
+.message-item .message-head {
+border-bottom: 1px solid #eee;
+margin-bottom: 8px;
+padding-bottom: 8px;
+}
+.message-item .message-head .avatar {
+margin-right: 20px;
+}
+.message-item .message-head .user-detail {
+overflow: hidden;
+}
+.message-item .message-head .user-detail h5 {
+font-size: 16px;
+font-weight: bold;
+margin: 0;
+}
+.message-item .message-head .post-meta {
+float: left;
+padding: 0 15px 0 0;
+}
+.message-item .message-head .post-meta >div {
+color: #333;
+font-weight: bold;
+text-align: right;
+}
+.post-meta > div {
+color: #777;
+font-size: 12px;
+line-height: 22px;
+}
+.message-item .message-head .post-meta >div {
+color: #333;
+font-weight: bold;
+text-align: right;
+}
+.post-meta > div {
+color: #777;
+font-size: 12px;
+line-height: 22px;
+}
+/*img {
+ min-height: 40px;
+ max-height: 40px;
+}*/
+
