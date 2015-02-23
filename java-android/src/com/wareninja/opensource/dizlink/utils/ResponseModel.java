@@ -12,14 +12,15 @@ import java.io.Serializable;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.google.gson.annotations.Expose;
 
 public class ResponseModel implements Serializable {
     
 	private static final String TAG = ResponseModel.class.getSimpleName(); 
 	private static final long serialVersionUID = 1L;
 
-	public ResponseMeta meta;// contains meta information
-	public Object data;// main body: contains JsonObject or JsonArray of the response
+	@Expose public ResponseMeta meta;// contains meta information
+	@Expose public Object data;// main body: contains JsonObject or JsonArray of the response
     //public Object notification;// extra: JsonObject used for notifications
 	
     public ResponseModel() {

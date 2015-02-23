@@ -60,8 +60,9 @@ public class ExampleUsage {
 		parameters.put("long_link", test_long_link);
 		parameters.put("simple_links", test_simple_links);
 		responseModel = mDizLinkApiClient.makeLink(parameters);
-		System.out.println(apiAction + " responseModel -> " + responseModel.toJsonString());
+		System.out.println(apiAction + " responseModel -> " + responseModel.toJsonStringPrinting());
 		
+		try {Thread.sleep(1000);} catch (Exception ex) {}
 		
 		// --- getLinkMeta :: Expand a short URL ---
 		apiAction = "getLinkMeta";
@@ -69,8 +70,9 @@ public class ExampleUsage {
 		parameters = new HashMap<String, String>();
 		parameters.put("dizlink_id", test_dizlink_id);
 		responseModel = mDizLinkApiClient.getLinkMeta(parameters);
-		System.out.println(apiAction + " responseModel -> " + responseModel.toJsonString());
+		System.out.println(apiAction + " responseModel -> " + responseModel.toJsonStringPrinting());
 		
+		try {Thread.sleep(1000);} catch (Exception ex) {}
 		
 		// --- getLinkStats :: Analytics/stats of a short URL ---
 		apiAction = "getLinkStats";
@@ -78,16 +80,28 @@ public class ExampleUsage {
 		parameters = new HashMap<String, String>();
 		parameters.put("dizlink_id", test_dizlink_id);
 		responseModel = mDizLinkApiClient.getLinkStats(parameters);
-		System.out.println(apiAction + " responseModel -> " + responseModel.toJsonString());
+		System.out.println(apiAction + " responseModel -> " + responseModel.toJsonStringPrinting());
 		
+		try {Thread.sleep(1000);} catch (Exception ex) {}
 		
 		// --- getMyLinks :: MyLinks ---
 		apiAction = "getMyLinks";
 		System.out.println(apiAction + " running...");
 		parameters = new HashMap<String, String>();
 		responseModel = mDizLinkApiClient.getMyLinks(parameters);
-		System.out.println(apiAction + " responseModel -> " + responseModel.toJsonString());
+		System.out.println(apiAction + " responseModel -> " + responseModel.toJsonStringPrinting());
 		
+		try {Thread.sleep(1000);} catch (Exception ex) {}
+		
+		// --- getIP2Location :: IP2Location ---
+		apiAction = "getIP2Location";
+		System.out.println(apiAction + " running...");
+		parameters = new HashMap<String, String>();
+		parameters.put("ip", "185.29.164.33");// FIXME: use the IP address to query for! 
+		parameters.put("address", "true");// query full address of the location
+		parameters.put("locale", "true");// also include locale details of the location
+		responseModel = mDizLinkApiClient.getIP2Location(parameters);
+		System.out.println(apiAction + " responseModel -> " + responseModel.toJsonStringPrinting());
 		/*
 		// ASYNC call example! 
 		apiAction = "makeLink-async";
