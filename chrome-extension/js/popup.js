@@ -12,10 +12,10 @@ var web_url;
 var selectedDomain; 
 
 if (MODE=='LIVE') {
-	api_url = 'http://api.diz.link';
+	api_url = 'https://api.diz.link';
 	cookieName = "diz.link_SESSION";
-	cookieUrl = "http://diz.link";
-	web_url = 'http://diz.link';
+	cookieUrl = "https://diz.link";
+	web_url = 'https://diz.link';
 	selectedDomain = 'diz.link';
 }
 else {
