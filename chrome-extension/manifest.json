@@ -23,7 +23,7 @@
     },
 	
 	"author": "BeerStorm.net",
-	"homepage_url": "https://diz.link",
+	"homepage_url": "https://baet.no",
 	"background": {
 	    "persistent": false
 	    , "page": "background.html"
@@ -31,10 +31,12 @@
 	
 	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
 	"permissions": [
-		"activeTab", "cookies", 
+		"activeTab", "cookies", "storage",
 		"clipboardRead", "clipboardWrite",
 		"https://api.diz.link/*",
-		"https://diz.link/*"
+		"https://diz.link/*",
+		"https://api.baet.no/*",
+		"https://baet.no/*"
 	]
 	
 }

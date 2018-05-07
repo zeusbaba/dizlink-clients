@@ -1,10 +1,10 @@
 {
 	"extension_name": {
-		"message": "DIZ.LINK :: Forkorte & Forenkle webadresser!",
+		"message": "BAET.no :: Forkorte & Forenkle Linker!",
 		"description": "The name of the extension"
 	},
 	"extension_short_name": {
-		"message": "DIZ.LINK",
+		"message": "BAET.no",
 		"description": "The short_name of the extension"
 	},
 	"extension_description": {
@@ -12,11 +12,11 @@
 		"description": "The description of the extension"
 	},
 	"extension_default_title": {
-		"message": "DIZ.LINK :: Forkorte & Forenkle webadresser!",
+		"message": "BAET.no :: Forkorte & Forenkle linker!",
 		"description": "The default title of the extension"
 	},
 	"headline": {
-		"message": "DIZ.LINK :: Forkorte & Forenkle webadresser!",
+		"message": "BAET.no :: Forkorte & Forenkle linker!",
 		"description": "The first headline of the extension"
 	},
 	"tabs": {

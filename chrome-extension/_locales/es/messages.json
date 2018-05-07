@@ -1,10 +1,10 @@
 {
 	"extension_name": {
-		"message": "DIZ.LINK :: Fácilmente haga corto link!",
+		"message": "BAET.no :: Fácilmente haga corto link!",
 		"description": "The name of the extension"
 	},
 	"extension_short_name": {
-		"message": "DIZ.LINK",
+		"message": "BAET.no",
 		"description": "The description of the extension"
 	},
 	"extension_description": {
@@ -12,11 +12,11 @@
 		"description": "The description of the extension"
 	},
 	"extension_default_title": {
-		"message": "DIZ.LINK :: Fácilmente haga corto link!",
+		"message": "BAET.no :: Fácilmente haga corto link!",
 		"description": "The default title of the extension"
 	},
 	"headline": {
-		"message": "DIZ.LINK :: Fácilmente haga corto link!",
+		"message": "BAET.no :: Fácilmente haga corto link!",
 		"description": "The first headline of the extension"
 	},
 	"tabs": {
