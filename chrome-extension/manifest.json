@@ -3,7 +3,7 @@
 	
 	"name": "__MSG_extension_name__",
 	"short_name": "__MSG_extension_short_name__",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	
 	"default_locale": "en",
 	"description": "__MSG_extension_description__",
@@ -31,7 +31,7 @@
 	
 	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
 	"permissions": [
-		"activeTab", "cookies", "storage",
+		"activeTab", "storage",
 		"clipboardRead", "clipboardWrite",
 		"https://api.diz.link/*",
 		"https://diz.link/*",
